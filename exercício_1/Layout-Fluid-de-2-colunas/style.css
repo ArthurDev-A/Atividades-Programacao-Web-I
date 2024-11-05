@@ -1,14 +1,38 @@
 body{
-    margin: auto;
-    padding: 0;
-    display: flex;
+    background-color: #f0f4f8;
+    color: #333333;
+    font-family: Arial, sans-serif;
 }
 
-.container{
+#header {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    padding: 1em;
+    margin: 1em 4%;
+    color: #ffffff;
+    background-color: #3e5060;
 }
 
-.container .column-one{
-    width: 100%;
+#main {
+    background-color: #dfe7ec;
+    color: #1a1a1a;
+    float: left;
+    width: 59.5%;
+    padding: 1%;
+    margin: 0 4%;
+}
+
+#extras {
+    background-color: #e4dccf;
+    color: #1a1a1a;
+    float: left;
+    width: 24.5%;
+    padding: 1%;
+    margin: 0 4% 0 0;
+}
+
+#footer {
+    color: #555555;
+    clear: left;
+    padding: 1em 0;
 }
