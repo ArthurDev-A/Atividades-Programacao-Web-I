@@ -4,11 +4,16 @@ body{
     font-family: Arial, sans-serif;
 }
 
+#wrapped {
+    width: 960px;
+    margin: 0 auto;
+}
+
 #header {
     display: flex;
     justify-content: center;
     padding: 16px;
-    margin: 16px 48px;
+    margin: 16px 20px;
     color: #ffffff;
     background-color: #3e5060;
 }
@@ -17,22 +22,25 @@ body{
     background-color: #dfe7ec;
     color: #1a1a1a;
     float: left;
-    width: 741px;
+    width: 618px;
+    margin: 0 20px;
     padding: 16px;
-    margin: 0 48px;
+    /*width: 741px;
+    padding: 16px;
+    margin: 0 48px;*/
 }
 
 #extras {
     background-color: #e4dccf;
     color: #1a1a1a;
     float: left;
-    width: 300px;
+    width: 218px;
+    margin: 0 20px 0 0;
     padding: 16px;
-    margin: 0 48px 0 0;
 }
 
 #footer {
     color: #555555;
     clear: left;
-    padding: 48px;
+    padding: 48px 20px;
 }
