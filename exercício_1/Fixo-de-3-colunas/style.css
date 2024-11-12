@@ -29,6 +29,7 @@ body{
     background-color: #e4dccf;
     color: #1a1a1a;
     width: 200px;
+    padding: 16px;
     /*position: absolute;*/
     top: 0;
     right: 0;
@@ -40,6 +41,7 @@ body{
     background-color: #dfe7ec;
     color: #1a1a1a;
     width: 520px;
+    padding: 16px;
     /*position: absolute;*/
     top: 0;
     left: 220px;
@@ -51,6 +53,7 @@ body{
     background-color: #d8e8dc;
     color: #1a1a1a;
     width: 200px;
+    padding: 16px;
     /*position: absolute;*/
     top: 0;
     left: 0;
