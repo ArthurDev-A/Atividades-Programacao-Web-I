@@ -4,25 +4,40 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Layout Fluid de 3 colunas com Bootstrap</title>
+    <title>Cursos de Dev</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .card-limit {
+            max-width: 30%;
+        }
+
+        .card-m {
+            margin: 1.6%;
+        }
+
+        .img-m {
+            margin: 0.5em 0;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">Lorem</a>
+            <a href="#" class="navbar-brand">Cursos</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
-                    <a href="#" class="navbar-item nav-link activate">Ipsum</a>
-                    <a href="#" class="navbar-item nav-link">Dolor</a>
+                    <a href="#" class="navbar-item nav-link activate">Início</a>
+                    <a href="#" class="navbar-item nav-link">Sobre</a>
+                    <!--Leva atṕe contaros-->
+                    <a href="#contato" class="navbar-item nav-link">Contato</a>
                 </div>
                 <div class="navbar-nav ms-auto">
-                    <a href="#" class="navbar-item nav-link activate">Register</a>
+                    <a href="#" class="navbar-item nav-link activate">Registrar</a>
                     <a href="#" class="navbar-item nav-link">Login</a>
                 </div>
             </div>
@@ -30,17 +45,86 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-mx-2">Teste</div>
+        <div class="row pt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h2 class="text-center">Bem-Vindo ao Cursos de Dev</h2>
+                <!--div dos cards-->
+                <div class="row justify-content-center">
+                    <div class="card card-limit card-m">
+                        <img class="card-img-top img-m" alt="Imagem 480x480" src="imagens/480.png">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Python Básico</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                                doloribus officiis modi, officia ad dignissimos fugiat qui labore molestiae hic sit,
+                                explicabo vel ex! Quos debitis fugiat nostrum. Animi, quam?</p>
+                            <a href="#" class="btn btn-primary mt-auto">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card card-limit card-m">
+                        <img class="card-img-top img-m" alt="Imagem 480x480" src="imagens/480.png">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Python Automação</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                                eveniet possimus facilis adipisci ratione voluptas eius laboriosam dolor! Voluptate
+                                libero amet consequatur corrupti voluptates ex eligendi harum consequuntur quaerat
+                                explicabo.</p>
+                            <a href="#" class="btn btn-primary mt-auto">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card card-limit card-m d-flex flex-column">
+                        <img class="card-img-top img-m" alt="Imagem 480x480" src="imagens/480.png">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Python Avançado</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam cum
+                                maxime consequatur vero rem architecto, ab molestiae aperiam repudiandae tempora a
+                                dolorum at nihil! Totam corporis impedit temporibus ad ut.</p>
+                            <a href="#" class="btn btn-primary mt-auto">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-3">
+                    <h2 class="text-center">Tabela de preços</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Curso</th>
+                                <th>Descrição</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>Python Básico</th>
+                                <th>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum doloribus officiis modi, officia ad dignissimos fugiat qui labore molestiae hic sit, explicabo vel ex! Quos debitis fugiat nostrum. Animi, quam?</th>
+                                <th>R$29,90</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Python Automação</th>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam cum maxime consequatur vero rem architecto, ab molestiae aperiam repudiandae tempora a dolorum at nihil! Totam corporis impedit temporibus ad ut.</th>
+                                <th>R$49,90</th>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Python Avançado</th>
+                                <th>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eveniet possimus facilis adipisci ratione voluptas eius laboriosam dolor! Voluptate libero amet consequatur corrupti voluptates ex eligendi harum consequuntur quaerat explicabo.</th>
+                                <th>R$69,90</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr>
+                <footer class="mb-3">
+                    <a class="mb-3" href="https://github.com/ArthurDev-A/" target="_blank">@ArthurDev-A</a>
+                </footer>
+            </div>
+            <div class="col-md-2"></div>
         </div>
-    </div>
-
-        <hr>
-        <footer>
-            <div class="mb-3">@ArthurDec-A</div>
-        </footer>
-    </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
