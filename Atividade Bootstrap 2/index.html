@@ -25,7 +25,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">Cursos</a>
+            <a href="#" class="navbar-brand">Cursos de Dev</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,7 +58,7 @@
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
                                 doloribus officiis modi, officia ad dignissimos fugiat qui labore molestiae hic sit,
                                 explicabo vel ex! Quos debitis fugiat nostrum. Animi, quam?</p>
-                            <a href="#" class="btn btn-primary mt-auto">Saiba Mais</a>
+                            <a href="#1" class="btn btn-primary mt-auto">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card card-limit card-m">
@@ -69,7 +69,7 @@
                                 eveniet possimus facilis adipisci ratione voluptas eius laboriosam dolor! Voluptate
                                 libero amet consequatur corrupti voluptates ex eligendi harum consequuntur quaerat
                                 explicabo.</p>
-                            <a href="#" class="btn btn-primary mt-auto">Saiba Mais</a>
+                            <a href="#2" class="btn btn-primary mt-auto">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card card-limit card-m d-flex flex-column">
@@ -79,11 +79,12 @@
                             <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam cum
                                 maxime consequatur vero rem architecto, ab molestiae aperiam repudiandae tempora a
                                 dolorum at nihil! Totam corporis impedit temporibus ad ut.</p>
-                            <a href="#" class="btn btn-primary mt-auto">Saiba Mais</a>
+                            <a href="#3" class="btn btn-primary mt-auto">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
 
+                <!--Tabela de Preços dos Cursos-->
                 <div class="pt-3">
                     <h2 class="text-center">Tabela de preços</h2>
                     <table class="table table-striped">
@@ -97,25 +98,59 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th>1</th>
+                                <th id="1">1</th>
                                 <th>Python Básico</th>
-                                <th>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum doloribus officiis modi, officia ad dignissimos fugiat qui labore molestiae hic sit, explicabo vel ex! Quos debitis fugiat nostrum. Animi, quam?</th>
+                                <th>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum doloribus officiis
+                                    modi, officia ad dignissimos fugiat qui labore molestiae hic sit, explicabo vel ex!
+                                    Quos debitis fugiat nostrum. Animi, quam?</th>
                                 <th>R$29,90</th>
                             </tr>
                             <tr>
-                                <th>2</th>
+                                <th id="2">2</th>
                                 <th>Python Automação</th>
-                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam cum maxime consequatur vero rem architecto, ab molestiae aperiam repudiandae tempora a dolorum at nihil! Totam corporis impedit temporibus ad ut.</th>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam cum maxime
+                                    consequatur vero rem architecto, ab molestiae aperiam repudiandae tempora a dolorum
+                                    at nihil! Totam corporis impedit temporibus ad ut.</th>
                                 <th>R$49,90</th>
                             </tr>
                             <tr>
-                                <th>3</th>
+                                <th id="3">3</th>
                                 <th>Python Avançado</th>
-                                <th>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eveniet possimus facilis adipisci ratione voluptas eius laboriosam dolor! Voluptate libero amet consequatur corrupti voluptates ex eligendi harum consequuntur quaerat explicabo.</th>
+                                <th>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eveniet
+                                    possimus facilis adipisci ratione voluptas eius laboriosam dolor! Voluptate libero
+                                    amet consequatur corrupti voluptates ex eligendi harum consequuntur quaerat
+                                    explicabo.</th>
                                 <th>R$69,90</th>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+
+                <!--Formulário para contato, dúvidas e sugestões-->
+                <div class="pt-3">
+                    <h2 class="text-center">Contato</h2>
+                    <form id="contato">
+                        <div class="mb-3">
+                            <label class="form-label" for="inputNome">Nome</label>
+                            <input type="text" class="form-control" id="inputNome" placeholder="Seu nome">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="nome@exemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputMensagem">Mensagem</label>
+                            <textarea rows="3" class="form-control" id="inputMensagem"
+                                placeholder="Escreva sua mensagem aqui"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="check">
+                                <label class="form-check-label" for="check">Enviar uma cópia para o meu email</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="mb-3 btn btn-primary">Enviar</button>
+                    </form>
                 </div>
 
                 <hr>
@@ -126,9 +161,9 @@
             <div class="col-md-2"></div>
         </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
