@@ -1,0 +1,21 @@
+<%- include('./partials/header') %>
+    <main>
+      <div class="ui segment">
+        <h1><%= title %></h1>
+        <p>Bem-vindo a <%= title %></p>
+
+        <form id="formulario">
+          <div class="ui form">
+            <div class="field">
+              <label>Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Digite o seu nome">
+            </div>
+            <div class="ui button" id="submit">Enviar</div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <%- include('./partials/footer') %>
+    <script src="javascripts/script.js"></script>
+  </body>
+</html>
