@@ -1,4 +1,2 @@
-# Atividade Templates
-### Criar um projeto para implementar o exercício final da Aula 6 (Express), utilizando o Express Generator e Templates EJS. Criar um pequeno conteúdo para cada rota especificada no exercício.
-
-### Postar o link do Github.
+# Atividade-Layouts
+Atividade Layouts da disciplina de Programação Web I
