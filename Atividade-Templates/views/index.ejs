@@ -1,8 +1,31 @@
 <%- include('./partials/header') %>
     <main>
       <div class="ui segment">
-        <h1><%= title %></h1>
-        <p>Welcome to <%= title %></p>
+        <div class="ui container">
+          <h1>Bem-vindo ao Meu Site!</h1>
+          <p>Sou Arthur, estudante do IFCE - Campus Fortaleza, programador e amante da matemática. Este site é um espaço para compartilhar meus projetos, conhecimentos e interesses nas áreas de tecnologia e programação.</p>
+          <div class="ui segment">
+            <h3>Sobre Mim</h3>
+            <p>Descubra mais sobre minha paixão por programação e matemática!</p>
+            <a href="/about" class="btn btn-primary">Saiba Mais</a>
+          </div>
+          <div class="ui segment">
+            <h3>Portfólio</h3>
+            <p>Confira meus projetos em áreas como desenvolvimento web, Java e SwiftUI.</p>
+            <a href="/portfolio" class="btn btn-primary">Ver Portfólio</a>
+          </div>
+          <div class="ui segment">
+            <h3>Contato</h3>
+            <p>Entre em contato para colaborações ou tirar dúvidas!</p>
+            <a href="/contact" class="btn btn-primary">Fale Comigo</a>
+          </div>
+        </div>
+        
+        <div class="ui container" style="padding-left: 0.5%; padding-top: 0.5%;">
+          <p>"Falar é fácil. Mostre-me o código."</p>
+          <footer class="ui footer" style="padding-left: 1%;">- Linus Torvalds</footer>
+        </div>
+        
       </div>
     </main>
     <%- include('./partials/footer') %>
