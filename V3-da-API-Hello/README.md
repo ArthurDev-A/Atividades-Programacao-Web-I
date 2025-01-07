@@ -6,4 +6,4 @@
 * Faça um tratamento de erro caso um endpoint inválido seja consultado
 * Manter as versões anteriores na API
 
-*OBBS:* para executar o código, rode `npm install` no console.
+**OBS:** para executar o código, rode `npm install` no console.
