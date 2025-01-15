@@ -1,0 +1,17 @@
+{
+  "name": "crud-livraria",
+  "version": "1.0.0",
+  "description": "![image](https://github.com/user-attachments/assets/280ba769-14c3-42d3-896d-a22be5e369a6)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
