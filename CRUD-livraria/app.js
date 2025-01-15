@@ -35,11 +35,51 @@ var livraria = [
         "ano": 1605,
         "quant": 5,
         "preco": 49.90
+    },
+    { //livro para teste da operação like no título e estoque 0
+        "id": 4,
+        "titulo": "O Quixote",
+        "autor": "Miguel de Cervantes",
+        "editora": "Editora Z",
+        "ano": 1605,
+        "quant": 0,
+        "preco": 49.90
     }
 ];
 
-app.get("/livraria", (req, res) => {
-    res.json(livraria);
+app.get("/livraria/recente", (req, res) => {
+    const livros = [...livraria].sort((a, b) => b.ano - a.ano);
+    res.json(livros);
+});
+
+app.get("/livraria/antigo", (req, res) => {
+    const livros = [...livraria].sort((a, b) => a.ano - b.ano);
+    res.json(livros);
+});
+
+app.get("/livraria/estoque/", (req, res) => {
+    const livros = livraria.filter((u => u.quant == 0));
+    res.json(livros);
+});
+
+app.get("/livraria/editora/:editora", (req, res) => {
+    const livros = livraria.filter(u => u.editora === req.params.editora);
+    res.json(livros);
+});
+
+app.get("/livraria/titulo/:titulo", (req, res) => {
+    const livros = livraria.filter(u => u.titulo.includes(req.params.titulo));
+    res.json(livros);
+});
+
+app.get("/livraria/preco/maior/:preco", (req, res) => {
+    const livros = livraria.filter((u => u.preco > parseFloat(req.params.preco)));
+    res.json(livros);
+});
+
+app.get("/livraria/preco/menor/:preco", (req, res) => {
+    const livros = livraria.filter((u => u.preco < parseFloat(req.params.preco)));
+    res.json(livros);
 });
 
 app.get("/livraria/:id", (req, res) => {
@@ -47,9 +87,8 @@ app.get("/livraria/:id", (req, res) => {
     res.json(livro);
 });
 
-app.get("/livraria/editora/:editora", (req, res) => {
-    const livros = livraria.filter(u => u.editora === req.params.editora);
-    res.json(livros);
+app.get("/livraria", (req, res) => {
+    res.json(livraria);
 });
 
 app.post("/livraria", (req, res) => {
@@ -84,4 +123,8 @@ app.put("/livraria/:id", (req, res) => {
         preco: req.body.preco
     }
     res.json(livraria);
+});
+
+app.use((req, res) => {
+    res.status(404).json({ message: "Endpoint não foi encontrado"})
 });
