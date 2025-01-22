@@ -25,8 +25,8 @@ app.get('/:moeda', async (req, res, next) => {
         const bit = await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
         // Verifica se a moeda está no banco de dados
         if (bit.data.bpi[req.params.moeda]) {
-            console.log(bit.data.bpi[req.params.moeda])
-            res.render('index', {a: bit.data, b: bit.data.bpi[req.params.moeda], moeda: req.params.moeda})
+            console.log(bit.data)
+            res.render('index', {b: bit.data, moeda: req.params.moeda})
         } else {
             // Passa para o próximo endpoint, no caso *
             next()

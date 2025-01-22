@@ -16,16 +16,16 @@
             <div class="card-body">
                 <h3 class="card-title" style="color: black">Coin</h3>
                 <p class="card-text" style="color: orange">
-                    <%= a.chartName %>
+                    <%= b.chartName %>
                 </p>
                 <h3 class="card-title" style="color: black">Valor em <%= moeda %></h3>
                 <p class="card-text">
-                    <%= b.rate %> em <%= a.time.updated %>
+                    <%= b.bpi[moeda].rate %> em <%= b.time.updated %>
                 </p>
             </div>
             <footer class="card-footer" style="color: gray">
                 <p>
-                    <%= a.disclaimer %>
+                    <%= b.disclaimer %>
                 </p>
             </footer>
         </article>
