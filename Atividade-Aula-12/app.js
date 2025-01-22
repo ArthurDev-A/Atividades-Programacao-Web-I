@@ -19,7 +19,7 @@ app.use((req, res, next) => {
     next()
 })
 
-//mostrar preço da moeda corrente
+//mostrar preço do bicoin na moeda
 app.get('/:moeda', async (req, res, next) => {
     try {
         const bit = await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
