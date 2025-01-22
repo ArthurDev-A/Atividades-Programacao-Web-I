@@ -20,11 +20,17 @@ app.use((req, res, next) => {
 })
 
 //mostrar preço da moeda corrente
-app.get('/', async (req, res) => {
+app.get('/:moeda', async (req, res, next) => {
     try {
         const bit = await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
-        console.log(bit.data)
-        res.render('index', {b: bit.data})
+        // Verifica se a moeda está no banco de dados
+        if (bit.data.bpi[req.params.moeda]) {
+            console.log(bit.data.bpi[req.params.moeda])
+            res.render('index', {a: bit.data, b: bit.data.bpi[req.params.moeda], moeda: req.params.moeda})
+        } else {
+            // Passa para o próximo endpoint, no caso *
+            next()
+        }
     } catch (err) {
         console.log(err)
     }
@@ -32,5 +38,6 @@ app.get('/', async (req, res) => {
 
 //excessão 404
 app.get('*', (req, res) => {
+    console.log("endpoint inexistente")
     res.sendStatus(404)
 })
